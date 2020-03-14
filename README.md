@@ -22,4 +22,4 @@ $resp = $ov->send_request($req);
 print_r($resp);
 ```
 
-Inside the sample *example.php* script, you can find some example on how to open, manage and close new sessions with tokens and much more.
+Inside the sample *example.php* script, you can find some examples on how to open, manage and close new sessions with tokens and much more.
