@@ -1,5 +1,5 @@
 <?php
-require_once ('src/OpenVidu.php');
+require_once ('src/OpenViduClient.php');
 require_once ('src/Requests/GetOpenviduConfiguration.php');
 require_once ('src/Requests/NewSessionId.php');
 require_once ('src/Requests/NewToken.php');
@@ -7,7 +7,7 @@ require_once ('src/Requests/GetSessionInfo.php');
 require_once ('src/Requests/GetAllSessionInfo.php');
 require_once ('src/Requests/CloseSession.php');
 
-use Legolabs\OpenVidu\OpenVidu;
+use Legolabs\OpenVidu\OpenViduClient;
 use Legolabs\OpenVidu\Requests\GetOpenviduConfiguration;
 use Legolabs\OpenVidu\Requests\NewSessionId;
 use Legolabs\OpenVidu\Requests\NewToken;
@@ -19,7 +19,7 @@ try
 {
 	// OpenVidu REST API main object istantiation
 	// -------------------------------------------------------------
-	$ov = new OpenVidu("https://demos.openvidu.io", "MY_SECRET");
+	$ov = new OpenViduClient("https://demos.openvidu.io", "MY_SECRET");
 
 
 

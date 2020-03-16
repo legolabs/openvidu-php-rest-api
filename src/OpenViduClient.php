@@ -2,10 +2,10 @@
 
 namespace Legolabs\OpenVidu;
 
-/** OpenVidu REST API main class
+/** OpenVidu REST API Client main class
  *
  * @author agardoni */
-class OpenVidu
+class OpenViduClient
 {
 	private $server;
 	private $port;
