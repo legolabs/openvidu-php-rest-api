@@ -1,9 +1,9 @@
 # openvidu-php-rest-api
-OpenVidu REST API written in PHP
+OpenVidu REST API client written in PHP
 
 **Note**: PHP >= 7.2 required
 
-## A simple PHP implementation for OpenVidu REST API requests
+## A simple PHP implementation to send OpenVidu REST API requests
 
 OpenVidu [(https://openvidu.io)](https://openvidu.io/) is a powerful open source library for secure real-time video stream management and composition.
 OpenVidu provides a full REST API, and this project aims to create a simple PHP implementation to call them.
@@ -22,4 +22,4 @@ $resp = $ov->send_request($req);
 print_r($resp);
 ```
 
-Inside the sample *example.php* script, you can find some example on how to open, manage and close new sessions with tokens and much more.
+Inside the sample *example.php* script, you can find some examples on how to open, manage and close new sessions with tokens and much more.
