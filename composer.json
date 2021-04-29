@@ -1,0 +1,21 @@
+{
+    "name": "legolabs/openvidu-php-rest-api",
+    "description": "OpenVidu REST API client",
+    "type": "library",
+    "license": "GPL-2.0-only",
+    "authors": [
+        {
+            "name": "Andrea Gardoni",
+            "email": "andrea.gardoni@legolabs.it"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files": [
+            "OpenViduClient.php"
+        ],
+        "psr-4": {
+            "Legolabs\\OpenVidu\\": "src/"
+        }
+    }
+}
