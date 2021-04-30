@@ -8,7 +8,7 @@ OpenVidu REST API client written in PHP
 OpenVidu [(https://openvidu.io)](https://openvidu.io/) is a powerful open source library for secure real-time video stream management and composition.
 OpenVidu provides a full REST API, and this project aims to create a simple PHP implementation to call them.
 
-An official complete OpenVidu REST API description can be found here: [https://openvidu.io/docs/reference-docs/REST-API/](https://openvidu.io/docs/reference-docs/REST-API/)
+An official complete OpenVidu REST API description can be found here: [https://docs.openvidu.io/en/latest/reference-docs/REST-API/](https://docs.openvidu.io/en/latest/reference-docs/REST-API/)
 
 ### Examples
 
