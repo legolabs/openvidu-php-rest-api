@@ -15,7 +15,7 @@ An official complete OpenVidu REST API description can be found here: [https://d
 This library is very simple to use. You can istantiate an OpenVidu object, a Request object and then send it through the OpenVidu->send_request method
 
 ``` php
-$ov = new OpenVidu("https://demos.openvidu.io", "MY_SECRET");
+$ov = new OpenViduClient("https://demos.openvidu.io", "MY_SECRET");
 $req = new GetOpenviduConfiguration();
 $resp = $ov->send_request($req);
 
