@@ -68,6 +68,11 @@ class OpenViduClient
 					$str_parameters = json_encode($req->parameters);
 					curl_setopt($curl, CURLOPT_POSTFIELDS, $str_parameters);
 				}
+				// empty array gets Content-Length:0
+				else
+				{
+					curl_setopt($curl, CURLOPT_POSTFIELDS, []);
+				}
 
 				break;
 
