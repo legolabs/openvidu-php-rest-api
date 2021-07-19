@@ -12,6 +12,7 @@ class OpenViduClient
 	private $username;
 	private $secret;
 	private $url;
+	private $ssl_verify;
 
 	/** Constructor
 	 *
@@ -21,14 +22,17 @@ class OpenViduClient
 	 *        	OpenVidu secret
 	 * @param int $port
 	 *        	openvidu service port (default = 4443)
+	 * @param bool $ssl_verify
+	 *        	verify openvidu server (default = false)
 	 * @param string $username
 	 *        	OpenVidu service username (default = OPENVIDUAPP) */
-	function __construct(string $server, string $secret, int $port = 4443, string $username = 'OPENVIDUAPP')
+	function __construct(string $server, string $secret, int $port = 4443, bool $ssl_verify = false, string $username = 'OPENVIDUAPP')
 	{
 		$this->server = $server;
 		$this->port = $port;
 		$this->username = $username;
 		$this->secret = $secret;
+		$this->ssl_verify = $ssl_verify;
 
 		$this->url = "{$this->server}:{$port}";
 	}
@@ -50,8 +54,16 @@ class OpenViduClient
 		// cURL request composition
 		$curl = curl_init();
 
-		curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+		if ($this->ssl_verify)
+		{
+			curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
+			curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
+		}
+		else
+		{
+			curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+			curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+		}
 
 		if (count($req->http_headers) > 0)
 		{
