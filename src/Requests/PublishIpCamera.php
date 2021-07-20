@@ -17,6 +17,7 @@ class PublishIpCamera extends aPostRequest
 	function __construct(string $session_id, string $rtspUri)
 	{
 		$this->api_url = "/api/sessions/{$session_id}/connection";
+		$this->set_parameter('type', 'IPCAM');
 		$this->set_parameter('rtspUri', $rtspUri);
 	}
 }
